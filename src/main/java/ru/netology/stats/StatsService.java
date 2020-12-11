@@ -10,11 +10,7 @@ public class StatsService {
     }
 
     public long avgSalesPerMonth(long[] purchases) {
-        int month = 0;
-        for (long purchase : purchases) {
-            month += 1;
-        }
-        return sumOfAllSales(purchases) / month;
+        return sumOfAllSales(purchases) / purchases.length;
     }
 
     public long lastMaxSalesMonth(long[] purchases) {
